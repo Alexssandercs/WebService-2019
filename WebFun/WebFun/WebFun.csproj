@@ -72,6 +72,9 @@
     <Content Include="WebService2.asmx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\Produto.cs" />
+    <Compile Include="Entity\Produto.cs" />
+    <Compile Include="Entity\xml.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebService1.asmx.cs">
       <DependentUpon>WebService1.asmx</DependentUpon>
