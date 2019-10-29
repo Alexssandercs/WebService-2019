@@ -23,6 +23,7 @@ namespace WebFun
     {
 
         private List<Produto> estoque;
+        private List<Compra> compras;
 
 
         [WebMethod]
