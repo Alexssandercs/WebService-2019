@@ -34,16 +34,11 @@ while True:
     print('0) Sair')                                         
     print('\n')
     op = input('> ')
+#------------------------------Listar Produtos -------------------------------------    
     if op == '1':
-        marca = input('Marca (1- Todas) > ')
-        if marca == '1':
-            x = [client.service.ObterProdutoPorMarca('todas')]
-            x2 = [(x[0]['Produto'])]
-            print('\n')
-        else:
-            x = [client.service.ObterProdutoPorMarca(marca)]
-            x2 = [(x[0]['Produto'])]
-            print('\n')
+        x = [client.service.ObterProdutoPorMarca('todas')]
+        x2 = [(x[0]['Produto'])]
+        print('\n')
         ins = x2[0]
         i = 0    
         for prod in ins:
@@ -59,13 +54,34 @@ while True:
                 print("Status: Indisponivel")
             i = i + 1
             print('\n')
-        break
+#---------------------------- Comprar Produtos --------------------------------    
     elif op == '2':
         print("operação 2")
+#---------------------------- Buscar Produtos ---------------------------------         
     elif op == '3':
-        print("operação 3")
+        marca = input('Marca > ')
+        x = [client.service.ObterProdutoPorMarca(marca)]
+        x2 = [(x[0]['Produto'])]
+        print('\n')
+        ins = x2[0]
+        i = 0    
+        for prod in ins:
+            print ('Produto: ',ins[i]["nome"])
+            print ('Descrição: ',ins[i]["descricao"]) 
+            print ('Categoria: ',ins[i]["categoria"])
+            print ('Modelo: ',ins[i]["modelo"])
+            print ('Valor: R$ ',ins[i]["valor"])
+            disponivel = (ins[i]["quantidade"])
+            if disponivel != '0':
+                print("Status: Disponivel")
+            else:
+                print("Status: Indisponivel")
+            i = i + 1
+            print('\n')
+#---------------------------- Meus Produtos -----------------------------------             
     elif op == '4':
         print("operação 4")
+#-------------------------------- Sair ---------------------------------------- 
     elif op == '0':
         break
     else:
