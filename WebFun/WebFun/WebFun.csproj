@@ -73,6 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\Produto.cs" />
+    <Compile Include="Entity\Produt.cs" />
     <Compile Include="Entity\Produto.cs" />
     <Compile Include="Entity\xml.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

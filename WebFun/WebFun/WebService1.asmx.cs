@@ -8,6 +8,8 @@ using System.Xml.XmlConfiguration;
 using System.Data;
 using System.Xml.Serialization;
 using WebFun.Entity;
+using System.Web.Services;
+using System.Web.Script.Serialization;
 
 namespace WebFun
 {
@@ -22,8 +24,8 @@ namespace WebFun
     public class WebService1 : System.Web.Services.WebService
     {
 
-        private List<Produto> estoque;
 
+        private List<Produt> estoque = new List<Produt>();
 
         [WebMethod]
         [ScriptMethod(ResponseFormat = ResponseFormat.Xml)]
@@ -49,11 +51,47 @@ namespace WebFun
             return dadosXML;
         }
 
-      
 
- 
+        [WebMethod]
+        [ScriptMethod(ResponseFormat = ResponseFormat.Xml)]
+        public string addProdut(string json)
+        {
+            string mensagem = null;
 
-       
+            try
+            {
+                JavaScriptSerializer js = new JavaScriptSerializer();
+                Produt p = js.Deserialize<Produt>(json);
+
+                estoque.Add(p);
+
+                return estoque.Count.ToString();
+
+            }
+            catch (Exception e)
+            {
+                mensagem = "ErrorServer.: " + e.Message;
+            }
+
+            return mensagem;
+
+           
+
+
+
+            xml XML = new xml();
+
+ //           Produto teste = XML.produtoXml(produto);
+            
+            //Retornar o xml
+
+ //           return teste.descricao_func;
+        }
+
+
+
+
+
 
     }
 }
