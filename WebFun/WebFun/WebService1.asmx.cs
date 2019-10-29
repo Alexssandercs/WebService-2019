@@ -24,6 +24,11 @@ namespace WebFun
     public class WebService1 : System.Web.Services.WebService
     {
 
+<<<<<<< HEAD
+=======
+        private List<Produto> estoque;
+        private List<Compra> compras;
+>>>>>>> c1f74eb22e1a08b473a5c67902de29c558f7d5b1
 
         private List<Produt> estoque = new List<Produt>();
 

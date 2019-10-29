@@ -73,7 +73,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\Produto.cs" />
+<<<<<<< HEAD
     <Compile Include="Entity\Produt.cs" />
+=======
+    <Compile Include="Entity\Compra.cs" />
+    <Compile Include="Entity\Item.cs" />
+>>>>>>> c1f74eb22e1a08b473a5c67902de29c558f7d5b1
     <Compile Include="Entity\Produto.cs" />
     <Compile Include="Entity\xml.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

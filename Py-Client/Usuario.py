@@ -6,6 +6,7 @@ Created on Mon Oct 28 17:02:41 2019
 """
 
 from zeep import Client
+import json
 import os
 os.system('cls' if os.name == 'nt' else 'clear')
 #client = Client(wsdl='http://localhost:44383/WebService1.asmx?wsdl')
@@ -23,7 +24,8 @@ print('--------------------------------------------')
 
 client = Client(wsdl='http://localhost:44383/WebService1.asmx?wsdl')
 
-
+minhasComprar = []
+indexCompra = 0
 while True:
     print('\n')
     print('1) Listar Produtos')
@@ -55,7 +57,35 @@ while True:
             print('\n')
 #---------------------------- Comprar Produtos --------------------------------    
     elif op == '2':
-        print("operação 2")
+        x = [client.service.ObterProdutoPorMarca('todas')]
+        x2 = [(x[0]['Produto'])]
+        comprando = x2[0]
+        i = 0
+        listaNome = []
+        print('\n< Lista de Produtos >')
+        for prod in comprando:
+            disponivel = (comprando[i]["quantidade"])
+            if disponivel != '0':
+                listaNome.append(comprando[i]["nome"])
+                print(listaNome[i])
+                i = i + 1
+        
+        try: 
+            comprar = input('Produto > ')
+            listaNome.index(comprar)
+            quantidade = input('Quantidade > ')           
+            if(int(quantidade) <= 0):
+                print('Quantidade deve ser maior que 0(zero)')    
+                while (int(quantidade) <= 0):
+                    quantidade = input('Quantidade > ')
+            compraJson = '{"nome": "'+comprar+'", "quantidade":"'+str(quantidade)+'"}'
+            parsed_json = json.loads(compraJson)
+            print(parsed_json['nome'])
+            print(json.dumps(parsed_json))
+                       
+        except:
+            print('< Produto Inexistente >')
+            
 #---------------------------- Buscar Produtos ---------------------------------         
     elif op == '3':
         marca = input('Marca > ')
