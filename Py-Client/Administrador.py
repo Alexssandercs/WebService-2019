@@ -21,4 +21,39 @@ print('--------------------------------------------')
 print('|               Administrador              |')
 print('--------------------------------------------')
 
-client = Client(wsdl='http://localhost:44383/WebService1.asmx?wsdl')
+#client = Client(wsdl='http://localhost:44383/WebService1.asmx?wsdl')
+
+while True:
+    print('\n')
+    print('1) Cadastrar Produto')
+    print('2) Alterar Produto')  
+    print('3) Buscar Produto')
+    print('4) Listar Produtos')
+    print('5) Histórico de Compras')
+    print('6) Deletar Produto')
+    print('0) Sair')                                         
+    print('\n')
+    op = input('> ')
+#------------------------------Listar Produtos --------------------------------    
+    if op == '1':
+        print('opecação 1')
+#---------------------------- Comprar Produtos --------------------------------    
+    elif op == '2':
+        print("operação 2")
+#---------------------------- Buscar Produtos ---------------------------------         
+    elif op == '3':
+        print('opecação 3')
+#---------------------------- Meus Produtos -----------------------------------             
+    elif op == '4':
+        print("operação 4")
+#-------------------------- Histórico de Compras ------------------------------             
+    elif op == '5':
+        print("operação 5")
+#---------------------------- Deletar Produto ---------------------------------             
+    elif op == '6':
+        print("operação 6")        
+#-------------------------------- Sair ---------------------------------------- 
+    elif op == '0':
+        break
+    else:
+        print('Opcao invalida!')

@@ -23,7 +23,6 @@ print('--------------------------------------------')
 
 client = Client(wsdl='http://localhost:44383/WebService1.asmx?wsdl')
 
-#print (ins[0]["cpf"])
 
 while True:
     print('\n')
