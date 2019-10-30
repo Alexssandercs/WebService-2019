@@ -2,17 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\WebFun",
-    "\\WebFun\\packages\\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0",
-    "\\WebFun\\packages\\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\\build",
-    "\\WebFun\\packages\\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\\content",
-    "\\WebFun\\packages\\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\\lib",
-    "\\WebFun\\packages\\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\\tools",
     "\\WebFun\\WebFun",
     "\\WebFun\\WebFun\\bin",
-    "\\WebFun\\WebFun\\bin\\roslyn",
-    "\\WebFun\\WebFun\\Connected Services",
-    "\\WebFun\\WebFun\\Connected Services\\Application Insights"
+    "\\WebFun\\WebFun\\bin\\roslyn"
   ],
-  "SelectedNode": "\\README.md",
+  "SelectedNode": "\\WebFun\\WebFun\\WebFun.csproj",
   "PreviewInSolutionExplorer": false
 }

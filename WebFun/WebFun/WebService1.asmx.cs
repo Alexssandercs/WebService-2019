@@ -24,11 +24,10 @@ namespace WebFun
     public class WebService1 : System.Web.Services.WebService
     {
 
-<<<<<<< HEAD
-=======
-        private List<Produto> estoque;
+
+
         private List<Compra> compras;
->>>>>>> c1f74eb22e1a08b473a5c67902de29c558f7d5b1
+
 
         private List<Produt> estoque = new List<Produt>();
 
@@ -68,9 +67,14 @@ namespace WebFun
                 JavaScriptSerializer js = new JavaScriptSerializer();
                 Produt p = js.Deserialize<Produt>(json);
 
-                estoque.Add(p);
 
-                return estoque.Count.ToString();
+                // Criando o contexto
+                Contexto context = new Contexto();
+                // adicionando os registros e salvando
+                context.Produtos.Add(p);
+                context.SaveChanges();
+
+                return "1";
 
             }
             catch (Exception e)
@@ -80,17 +84,7 @@ namespace WebFun
 
             return mensagem;
 
-           
 
-
-
-            xml XML = new xml();
-
- //           Produto teste = XML.produtoXml(produto);
-            
-            //Retornar o xml
-
- //           return teste.descricao_func;
         }
 
 

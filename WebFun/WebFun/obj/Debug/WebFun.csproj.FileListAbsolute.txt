@@ -167,3 +167,7 @@ C:\Users\FlavioFilho\Documents\faculdade\8_Periodo\Sistemas Distribuidos\WebServ
 C:\Users\FlavioFilho\Documents\faculdade\8_Periodo\Sistemas Distribuidos\WebService-2019\WebFun\WebFun\obj\Debug\WebFun.dll
 C:\Users\FlavioFilho\Documents\faculdade\8_Periodo\Sistemas Distribuidos\WebService-2019\WebFun\WebFun\obj\Debug\WebFun.pdb
 >>>>>>> 91d000d71bcaa5fc36826b943830e4857545990a
+C:\Users\FlavioFilho\Documents\faculdade\8_Periodo\Sistemas Distribuidos\WebService-2019\WebFun\WebFun\bin\EntityFramework.dll
+C:\Users\FlavioFilho\Documents\faculdade\8_Periodo\Sistemas Distribuidos\WebService-2019\WebFun\WebFun\bin\EntityFramework.SqlServer.dll
+C:\Users\FlavioFilho\Documents\faculdade\8_Periodo\Sistemas Distribuidos\WebService-2019\WebFun\WebFun\bin\EntityFramework.xml
+C:\Users\FlavioFilho\Documents\faculdade\8_Periodo\Sistemas Distribuidos\WebService-2019\WebFun\WebFun\bin\EntityFramework.SqlServer.xml
